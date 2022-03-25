@@ -28,7 +28,7 @@ namespace proyecto.Models
         //Donde Ver
 
         public int DondeVerId { get; set; }
-        //definimos ForeignKey ("nombre de la foreign key")
+        
         [ForeignKey("DondeVerId")]
 
         public DondeVer DondeVer { get; set; }

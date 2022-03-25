@@ -12,8 +12,9 @@ namespace proyecto.Models
         [Key]
         public int Id { get; set; }
         //propiedades tabla actor
-        public string FotoPerfil { get; set; }
+        [Display(Name = "Foto de perfil")]
 
+        public string FotoPerfil { get; set; }
         public string Nombre { get; set; }
 
         public string Biografia { get; set; }

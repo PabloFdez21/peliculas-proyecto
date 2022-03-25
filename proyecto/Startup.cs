@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,8 +27,8 @@ namespace proyecto
         {
             //ContextoDb config
             //esto puede no funcionar, video 12  
-            services.AddDbContext<ContextoDb>();
-
+            services.AddDbContext<ContextoDb>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"))); //traductor //dentro definimos las conenecion string
+            //sql server configurado
             services.AddControllersWithViews();
         }
 
@@ -57,6 +58,10 @@ namespace proyecto
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //Base de datos
+
+            IniciarDB.Seed(app);
         }
     }
 }

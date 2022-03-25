@@ -12,6 +12,8 @@ namespace proyecto.Models
         [Key]
         public int Id { get; set; }
         //propiedades tabla Director
+        [Display(Name = "Foto de perfil")]
+
         public string FotoPerfil { get; set; }
 
         public string Nombre { get; set; }
