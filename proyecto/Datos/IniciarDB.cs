@@ -68,7 +68,7 @@ namespace proyecto.Datos
                      new Actores()
                     {
                         Nombre = "Tom Holland",
-                        FotoPerfil = "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcT2mdIv2oSgUO0zm7jZHboIgb1T7ligSAizsDiuDbOC94Dt8TZffj5WtNHFvoci",
+                        FotoPerfil = "https://marvin.com.mx/wp-content/uploads/2019/08/noel-gallagher-entrevista-madre-liam-2019.jpg",
                         Biografia = "Bio simple"
 
                     },

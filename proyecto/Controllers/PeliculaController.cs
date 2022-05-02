@@ -18,8 +18,8 @@ namespace proyecto.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var TodoDirectores = await _context.Peliculas.ToListAsync();
-            return View();
+            var TodoPeliculas = await _context.Peliculas.ToListAsync();
+            return View(TodoPeliculas);
         }
     }
 }

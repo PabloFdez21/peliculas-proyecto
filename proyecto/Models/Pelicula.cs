@@ -12,11 +12,18 @@ namespace proyecto.Models
     {
         [Key]
         public int Id { get; set; }
-
+        [Display(Name = "Titulo")]
         public string NombrePelicula { get; set; }
+        [Display(Name = "Descripcion")]
         public string DescripcionPelicula { get; set; }
+        [Display(Name = "Caratula")]
+
         public string Caratula { get; set; }
+        [Display(Name = "Fecha de estreno")]
+
         public DateTime Estreno { get; set; }
+        [Display(Name = "Categoria")]
+
         public CategoriaPelicula CategoriaPelicula { get; set; }
 
         // relaciones db

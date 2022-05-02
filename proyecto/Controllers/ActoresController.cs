@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using proyecto.Datos;
+using proyecto.Datos.Servicios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,19 +11,20 @@ namespace proyecto.Controllers
     public class ActoresController : Controller
     {
 
-        private readonly ContextoDb _context;
+        private readonly IServicioActores _servicio;
 
-        public ActoresController(ContextoDb context)
+        public ActoresController(IServicioActores servicio)
         {
-            _context = context;
+            _servicio = servicio;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _context.Actores.ToList();
+            var data = await _servicio.GetAllAsync();
             return View(data);
-
-            //data es simplemente la lista de los actores
+        }
+        public async Task<IActionResult> Crear() {
+            return View();
         }
     }
 }

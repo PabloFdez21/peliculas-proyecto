@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using proyecto.Datos;
+using proyecto.Datos.Servicios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,9 @@ namespace proyecto
             //esto puede no funcionar, video 12  
             services.AddDbContext<ContextoDb>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"))); //traductor //dentro definimos las conenecion string
             //sql server configurado
+
+            //SERVICIO DE CONFIGUTRACION
+            services.AddScoped<IServicioActores, ServicioActores>();
             services.AddControllersWithViews();
         }
 

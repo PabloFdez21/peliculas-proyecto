@@ -18,8 +18,8 @@ namespace proyecto.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var TodoDirectores = await _context.Dondevers.ToListAsync();
-            return View();
+            var todoDondeVers = await _context.Dondevers.ToListAsync();
+            return View(todoDondeVers);
         }
     }
 }

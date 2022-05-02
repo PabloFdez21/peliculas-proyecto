@@ -15,8 +15,10 @@ namespace proyecto.Models
         [Display(Name = "Foto de perfil")]
 
         public string FotoPerfil { get; set; }
+        [Display(Name = "Nombre")]
 
         public string Nombre { get; set; }
+        [Display(Name = "Biografia")]
 
         public string Biografia { get; set; }
 
