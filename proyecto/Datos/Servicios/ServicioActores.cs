@@ -24,7 +24,7 @@ namespace proyecto.Datos.Servicios
             throw new System.NotImplementedException();
         }
 
-        public async Task<IEnumerable<Actores>> GetAllAsync()
+        public async Task<IEnumerable<Actores>> GetAll()
         {
             var resultado = await _context.Actores.ToListAsync();  
             return resultado;

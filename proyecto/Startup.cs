@@ -60,7 +60,7 @@ namespace proyecto
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Pelicula}/{action=Index}/{id?}");
             });
 
             //Base de datos

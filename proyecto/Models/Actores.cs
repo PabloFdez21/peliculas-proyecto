@@ -13,9 +13,14 @@ namespace proyecto.Models
         public int Id { get; set; }
         //propiedades tabla actor
         [Display(Name = "Foto de perfil")]
-
+        [Required(ErrorMessage = "Campo obligatorio")]
         public string FotoPerfil { get; set; }
+        [Display(Name = "Nombre")]
+        [Required(ErrorMessage = "Campo obligatorio")]
+
         public string Nombre { get; set; }
+        [Display(Name = "Biografia")]
+        [Required(ErrorMessage = "Campo obligatorio")]
 
         public string Biografia { get; set; }
 
